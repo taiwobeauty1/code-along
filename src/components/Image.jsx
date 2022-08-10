@@ -5,7 +5,7 @@ export const Image = () => {
     <div>
       
         <img src={Taiwo} alt="" />
-        <p>Taiwo</p>
+        <p>Taiwo Beauty</p>
     </div>
     );
 }
