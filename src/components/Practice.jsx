@@ -5,7 +5,7 @@ function Practice() {
         <div className="flex justify-center items-center h-screen">
             <div className="w-96 shadow-md">
                 <div className="h-60 overflow-hidden">
-                <img src={Taiwo} alt="" />
+                {/* <img src={Taiwo} alt="" /> */}
                 </div>
             <div>
                 <div className="flex justify-between">
