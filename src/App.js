@@ -5,7 +5,7 @@
 // import NavItem from "./components/NavItem";
 // import Practice from "./components/Practice";
 import TaskManager from "./components/TaskManager"
-import Form from "./components/Form";
+// import Form from "./components/Form";
 
 function App() {
 return (
@@ -19,8 +19,8 @@ return (
   <Button label="Login" /> */}
   {/* <Image /> */}
   {/* <Practice /> */}
-  {/* <TaskManager></TaskManager> */}
-  <Form />
+  <TaskManager />
+  {/* <Form /> */}
   </div>
 );
 }
