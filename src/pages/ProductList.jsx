@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Product from "./Product";
-import Spinner from "./Spinner";
+import Product from "../components/Product";
+import Spinner from "../components/Spinner";
 import useAxios from "../hooks/useAxios";
 
 function ProductList() {
@@ -26,7 +26,7 @@ if (error) return <p>{error}</p>;
 
     return (
     <div className="flex flex-wrap gap-10 justify-center pt-10">
-        {data.map((data) => (
+        {data?.map((data) => (
         <Product product={data} />
         ))};
         </div>
