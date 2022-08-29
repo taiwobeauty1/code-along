@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { v4 as uuid } from "uuid";
-
 import TaskItem from "../components/TaskItem";
+import { v4 as uuid } from "uuid";
+import { useTaskContext } from "../context/tasks.Context";
+
 // import background from "../assets/background.";
 
 function TaskManager() {
-    const [tasks, setTasks] = useState(() => {
-        // get the tasks from localStorage
-    const tasks = localStorage.getItem("tasks");
-    if (!tasks) return [];
-    return JSON.parse(tasks);
-    });
+   const { tasks, setValue } = useTaskContext ();
     const [input, setInput] = useState("");
 
     const handleSubmit = (e) => {
@@ -22,13 +18,13 @@ function TaskManager() {
         text: input,
         completed: true,       };
 
-       setTasks([newTasks, ...tasks]);
+       setValue([newTasks, ...tasks]);
        setInput("");
     };
 
     const handleDelete = (id) => {
         const newTasks = tasks.filter((task) => task.id !== id);
-        setTasks(newTasks);
+        setValue(newTasks);
     };
     useEffect(() => {
         localStorage.setItem("tasks", JSON.stringify(tasks));
